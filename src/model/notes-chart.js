@@ -1,23 +1,12 @@
-const chart = document.getElementById('notes-chart');
+var notesChart = class NotesChart {
+	#interval = 60;
+	#data = [];
 
-new Chart('notes-chart', {
-	type: 'line',
-	data: {
-		labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-		datasets: [{
-		label: '# of Votes',
-		data: [12, 19, 3, 5, 2, 3],
-		borderWidth: 1
-		}]
-	},
-	options: {
-		scales: {
-		y: {
-			beginAtZero: true
-		}
-		}
+	constructor(interval, data) {
+		this.#interval = interval;
+		this.#data = data;
 	}
-});
+}
 
 /**
  * Outputs a list of evenly-spaced time labels for the chart.
