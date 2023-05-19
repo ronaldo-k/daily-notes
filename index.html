@@ -2,19 +2,26 @@
 <html>
 <head>
 	<title>Tumblr Daily Notes</title>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
 	<link rel="stylesheet" href="styles.css"></link>
 </head>
 <body>
 	<div class="main-display">
-		<div>
 			<h1>Tumblr Daily Notes</h1>
-		</div>
-		<div>
-			<canvas id='notes-chart'>
-			</canvas>
+			<canvas id='notes-chart'></canvas>
+		<div class="inputs">
+			<div class="labelled-input">
+				<input id="username-input" required type="text">
+				<label for="username-input"> Username </label>
+			</div>
+			<div class="labelled-input">
+				<input id="interval-input" type="range" min=60 max=360 step=30>
+				<label for="interval-input"> Time Interval </label>
+			</div>
+			<input id="load-data-input" type="button" value="Load More Data">
+			
 		</div>
 	</div>
-	<script src="src/notes-chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="src/ui/notes-chart-display.js"></script>
 </body>
 </html>
