@@ -26,3 +26,4 @@ function getLabels(interval) {
 
 	return result;
 }
+
