@@ -8,7 +8,7 @@ async function fetchPostNotes(buttonActionID) {
 	const fetchHeaders = new Headers();
 
 	try {
-		const response = await fetch("http://api.tumblr.com/v2/blog/" + blogName + ".tumblr.com/posts?api_key=" + apiKey + "&notes_info=true", headers = fetchHeaders);
+		const response = await fetch("https://api.tumblr.com/v2/blog/" + blogName + ".tumblr.com/posts?api_key=" + apiKey + "&notes_info=true", headers = fetchHeaders);
 		
 		// If rate limit is exceeded
 		if (response.status == 429) {
