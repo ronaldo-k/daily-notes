@@ -5,9 +5,10 @@ button.addEventListener('click', fetchPostNotes);
 
 async function fetchPostNotes(buttonActionID) {
 	const blogName = document.getElementById('username-input').value;
+	const fetchHeaders = new Headers();
 
 	try {
-		const response = await fetch("http://api.tumblr.com/v2/blog/" + blogName + ".tumblr.com/posts?api_key=" + apiKey + "&notes_info=true");
+		const response = await fetch("http://api.tumblr.com/v2/blog/" + blogName + ".tumblr.com/posts?api_key=" + apiKey + "&notes_info=true", headers = fetchHeaders);
 		
 		// If rate limit is exceeded
 		if (response.status == 429) {
